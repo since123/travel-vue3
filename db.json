@@ -1,0 +1,253 @@
+{
+  "data": {
+    "city": "上海",
+    "swiperList": [
+      {
+        "id": "1",
+
+        "imgUrl": "../src/assets/images/0d3c08c2d526f3350080ce41bbcb58c2.jpg_750x200_f1155433.jpg"
+      },
+      {
+        "id": "2",
+        "imgUrl": "../src/assets/images/5afbf529076ef6.jpg_r_640x214_7414b151.jpg"
+      },
+      {
+        "id": "3",
+        "imgUrl": "../src/assets/images/87a224d0349d94a11e97f31aa1aba4f5.jpg_750x200_1f78af87.jpg"
+      },
+      {
+        "id": "4",
+        "imgUrl": "../src/assets/images/80108ae993d1e3.jpg_r_640x214_89628567.jpg"
+      },
+      {
+        "id": "5",
+        "imgUrl": "../src/assets/images/8254351bdfba7389f5a4de4416b9d4f4.png_750x200_843e98ad.png"
+      },
+      {
+        "id": "6",
+        "imgUrl": "../src/assets/images/a69aaca81f60726157e4fa4230195f6d.jpg_750x200_a5f73327.jpg"
+      },
+      {
+        "id": "7",
+        "imgUrl": "../src/assets/images/b421363bbbb9184deacb4247eeea7485.jpg_750x200_12b42643.jpg"
+      },
+      {
+        "id": "7",
+        "imgUrl": "../src/assets/images/d7bbc21db442366a882e04ddc984669a.jpg_750x200_85e640d9.jpg"
+      },
+      {
+        "id": "7",
+        "imgUrl": "../src/assets/images/b421363bbbb9184deacb4247eeea7485.jpg_750x200_12b42643.jpg"
+      }
+    ],
+    "iconList": [
+      {
+        "id": "1",
+        "imgUrl": "../src/assets/images/a40ee278d67000f2a29d2e20f6a029b3.png",
+        "desc": "koadoawdo"
+      },
+      {
+        "id": "2",
+        "imgUrl": "../src/assets/images/a963333e1fa802.png",
+        "desc": "koadoawdo"
+      },
+      {
+        "id": "3",
+        "imgUrl": "../src/assets/images/cb72b99b71974c02.png",
+        "desc": "koadoawdo"
+      },
+      {
+        "id": "4",
+        "imgUrl": "../src/assets/images/eb88861d78fb9902.png",
+        "desc": "koadoawdo"
+      },
+      {
+        "id": "5",
+        "imgUrl": "../src/assets/images/f3dd6c383aeb3b02.png",
+        "desc": "koadoawdo"
+      },
+      {
+        "id": "6",
+        "imgUrl": "../src/assets/images/a40ee278d67000f2a29d2e20f6a029b3.png",
+        "desc": "koadoawdo"
+      },
+      {
+        "id": "7",
+        "imgUrl": "../src/assets/images/a963333e1fa802.png",
+        "desc": "koadoawdo"
+      },
+      {
+        "id": "8",
+        "imgUrl": "../src/assets/images/cb72b99b71974c02.png",
+        "desc": "koadoawdo"
+      },
+      {
+        "id": "9",
+        "imgUrl": "../src/assets/images/eb88861d78fb9902.png",
+        "desc": "koadoawdo"
+      },
+      {
+        "id": "10",
+        "imgUrl": "../src/assets/images/f3dd6c383aeb3b02.png",
+        "desc": "koadoawdo"
+      },
+      {
+        "id": "11",
+        "imgUrl": "../src/assets/images/a40ee278d67000f2a29d2e20f6a029b3.png",
+        "desc": "koadoawdo"
+      },
+      {
+        "id": "12",
+        "imgUrl": "../src/assets/images/a963333e1fa802.png",
+        "desc": "koadoawdo"
+      },
+      {
+        "id": "13",
+        "imgUrl": "../src/assets/images/cb72b99b71974c02.png",
+        "desc": "koadoawdo"
+      },
+      {
+        "id": "14",
+        "imgUrl": "../src/assets/images/eb88861d78fb9902.png",
+        "desc": "koadoawdo"
+      },
+      {
+        "id": "15",
+        "imgUrl": "../src/assets/images/f3dd6c383aeb3b02.png",
+        "desc": "koadoawdo"
+      }
+    ],
+    "recommendList": [
+      {
+        "id": "1",
+        "imgUrl": "../src/assets/images/2f9b29981c3c9f85a3.img.jpg_200x200_9d91fda5.jpg",
+        "title": "title",
+        "desc": "koadoawdo"
+      },
+      {
+        "id": "2",
+        "imgUrl": "../src/assets/images/04b92c99462687fa1ba45c1b5ba4ad77.jpg_200x200_4ab5da75.jpg",
+        "title": "title",
+        "desc": "koadoawdo"
+      },
+      {
+        "id": "3",
+        "imgUrl": "../src/assets/images/4ee5653be58dcb1a3.water.jpg_200x200_d169685d.jpg",
+        "title": "title",
+        "desc": "koadoawdo"
+      },
+      {
+        "id": "4",
+        "imgUrl": "../src/assets/images/4fcd53b16db83ac7a3.water.jpg_200x200_4ca73ce5.jpg",
+        "title": "title",
+        "desc": "koadoawdo"
+      }
+    ],
+    "weekendList": [
+      {
+        "id": "1",
+        "imgUrl": "../src/assets/images/5afbf529076ef6.jpg_r_640x214_7414b151.jpg",
+        "title": "title",
+        "desc": "koadoawdo"
+      },
+      {
+        "id": "2",
+        "imgUrl": "../src/assets/images/80108ae993d1e3.jpg_r_640x214_89628567.jpg",
+        "title": "title",
+        "desc": "koadoawdo"
+      },
+      {
+        "id": "3",
+        "imgUrl": "../src/assets/images/abe8a48a6ef8bf.jpg_r_640x214_7c41cc81.jpg",
+        "title": "title",
+        "desc": "koadoawdo"
+      },
+      {
+        "id": "4",
+        "imgUrl": "../src/assets/images/e23304b4b90d16.jpg_r_640x214_87d3b4f1.jpg",
+        "title": "测你弄完in覅哦",
+        "desc": "koadooe从你偶尔都女女do"
+      }
+    ]
+  },
+  "city": {
+    "cities": {
+      "A": [
+        {
+          "id": "1",
+          "name": "阿克苏"
+        },
+        {
+          "id": "2",
+          "name": "安康"
+        },
+        {
+          "id": "3",
+          "name": "安庆"
+        },
+        {
+          "id": "4",
+          "name": "鞍山"
+        }
+      ],
+      "B": [
+        {
+          "id": "5",
+          "name": "北京"
+        },
+        {
+          "id": "6",
+          "name": "蚌埠"
+        }
+      ],
+      "H": [
+        {
+          "id": "7",
+          "name": "湖北"
+        },
+        {
+          "id": "8",
+          "name": "湖南"
+        },
+        {
+          "id": "9",
+          "name": "河南"
+        },
+        {
+          "id": "10",
+          "name": "河北"
+        }
+      ],
+      "N": [
+        {
+          "id“": "11",
+          "name": "南京"
+        }
+      ],
+      "S": [
+        {
+          "id“": "12",
+          "name": "山东"
+        },
+        {
+          "id“": "13",
+          "name": "山西"
+        },
+        {
+          "id“": "14",
+          "name": "陕西"
+        }
+      ]
+    },
+    "hotCities": [
+      {
+        "id“": "1",
+        "name": "南京"
+      },
+      {
+        "id“": "5",
+        "name": "湖北"
+      }
+    ]
+  }
+}
