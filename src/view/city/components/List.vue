@@ -1,5 +1,5 @@
 <template>
-  <div class="list" ref="wrapper">
+  <div class="list">
     <div class="area">
       <div class="title border-topbottom">当前城市</div>
       <div class="button-list">
@@ -21,26 +21,28 @@
         </div>
       </div>
     </div>
-    <div class="areaList">
-      <div class="area" v-for="(item, key) of cities" :key="key" :ref="elem => elems[key] = elem">
-        <div class="title border-topbottom">{{key}}</div>
-        <div class="item-list">
-          <div
-            class="item border-bottom"
-            v-for="innerItem of item"
-            :key="innerItem.id"
-            @click="handleCityClick(innerItem.name)"
-          >{{innerItem.name}}</div>
+    <div class="areaList" ref="wrapper">
+      <div>
+        <div class="area" v-for="(item, key) of cities" :key="key" :ref="elem => elems[key] = elem">
+          <div class="title border-topbottom">{{key}}</div>
+          <div class="item-list">
+            <div
+              class="item border-bottom"
+              v-for="innerItem of item"
+              :key="innerItem.id"
+              @click="handleCityClick(innerItem.name)"
+            >{{innerItem.name}}</div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-import Bscroll from 'better-scroll'
+import BScroll from '@better-scroll/core'
 import { useStore } from 'vuex'
 import { useRouter } from 'vue-router'
-import { onMounted, watch, ref } from 'vue'
+import { onMounted, watch, ref, onUpdated } from 'vue'
 export default {
   name: 'CityList',
   props: {
@@ -53,8 +55,8 @@ export default {
     const router = useRouter()
     const currentCity = store.state.city
     const elems = ref({})
-    let scroll = null
     const wrapper = ref(null)
+    let scroll = null
     function handleCityClick(city) {
       store.commit('changeCity', city)
       router.push('/')
@@ -63,17 +65,22 @@ export default {
       () => props.letter,
       (letter, preLetter) => {
         console.log('prop.letter', props.letter)
-        if (letter) {
-          console.log('xoihi')
+        if (letter && scroll) {
           const element = elems.value[letter]
+          console.log('watch', element)
+          // debugger
           scroll.scrollToElement(element)
         }
-      },
-      { deep: true }
+      }
+      // { deep: true }
     )
     onMounted(() => {
-      scroll = new Bscroll(wrapper.value, { click: true })
+      scroll = new BScroll(wrapper.value, { click: true })
     })
+    onUpdated(() => {
+      scroll && scroll.refresh()
+    })
+
     return { currentCity, elems, wrapper, handleCityClick }
   },
 }
@@ -98,7 +105,8 @@ export default {
 }
 
 .list {
-  height: 88vh;
+  // overflow: scroll;
+  // height: 88vh;
   display: flex;
   flex-flow: column nowrap;
   position: absolute;

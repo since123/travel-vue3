@@ -17,10 +17,10 @@
   </div>
 </template>
 <script>
-import Bscroll from 'better-scroll'
-import { mapMutations } from 'vuex'
+import BScroll from '@better-scroll/core'
 import { useRouter } from 'vue-router'
-import { computed, onMounted, watch, ref } from 'vue'
+import { useStore } from 'vuex'
+import { computed, onMounted, watch, ref, onUpdated } from 'vue'
 export default {
   name: 'CitySearch',
   props: {
@@ -30,29 +30,30 @@ export default {
   setup(props) {
     const keyword = ref('')
     const list = ref([])
+    const search = ref(null)
     let timer = null
     const router = useRouter()
+    const store = useStore()
     let scroll = null
-    let search = ref(null)
-    function handleCityClick(city) {
-      changeCity(city)
-      store.commit('changeCity', city)
-      router.push('/')
-    }
+    const hasNoData = computed(() => {
+      !list.length
+    })
+
     watch(
-      () => props.keyword,
+      () => keyword.value,
       (keyword, preKeyword) => {
         if (timer) {
-          clearTimeout(this.timer)
+          clearTimeout(timer)
+          timer = null
         }
         if (!keyword) {
-          list = []
+          list.value = []
           return
         }
         timer = setTimeout(() => {
           const result = []
-          for (let i in cities) {
-            cities[i].forEach((value) => {
+          for (let i in props.cities) {
+            props.cities[i].forEach((value) => {
               if (
                 value.spell.indexOf(keyword) > -1 ||
                 value.name.indexOf(keyword) > -1
@@ -61,17 +62,21 @@ export default {
               }
             })
           }
-          list = result
+          list.value = result
         }, 100)
       }
     )
+    function handleCityClick(city) {
+      store.commit('changeCity', city)
+      router.push('/')
+    }
     onMounted(() => {
-      scroll = new Bscroll(search.value, { click: true })
+      scroll = new BScroll(search.value, { click: true })
     })
-    const hasNoData = computed(() => {
-      return !list.length
-    })
-    return { keyword, list, search, handleCityClick, hasNoData }
+    // onUpdated(() => {
+    //   scroll && scroll.refresh()
+    // })
+    return { keyword, list, search, hasNoData, handleCityClick }
   },
 }
 </script>

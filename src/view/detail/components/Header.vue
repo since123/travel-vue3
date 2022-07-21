@@ -11,39 +11,40 @@
   </div>
 </template>
 <script>
+import { reactive, ref, onActivated, onDeactivated } from 'vue'
 export default {
   name: 'DetailHeader',
-  data() {
-    return {
-      showAbs: true,
-      opacityStyle: {
-        opacity: 0,
-      },
-    }
-  },
-  methods: {
-    handleScroll() {
+  setup() {
+    let showAbs = ref(true)
+    let opacityStyle = reactive({
+      opacity: 0,
+    })
+    function handleScroll() {
       const top = document.documentElement.scrollTop
       if (top > 60) {
         let opacity = top / 140
         opacity = opacity > 1 ? 1 : opacity
-        this.opacityStyle = { opacity }
-        this.showAbs = false
+        opacityStyle = { opacity }
+        showAbs.value = false
       } else {
-        this.showAbs = true
+        showAbs.value = true
       }
-    },
-  },
-  activated() {
-    window.addEventListener('scroll', this.handleScroll)
-  },
-  deactivated() {
-    window.removeEventListener('scroll', this.handleScroll)
+    }
+
+    onActivated(() => {
+      window.addEventListener('scroll', handleScroll)
+    })
+    onDeactivated(() => {
+      window.removeEventListener('scroll', handleScroll)
+    })
+    return { showAbs, opacityStyle, handleScroll }
   },
 }
 </script>
 <!-- @import '~styles/varibles.styl' -->
 <style lang="stylus" scoped>
+@import '../src/assets/styles/varibles.styl';
+
 .header-abs {
   position: absolute;
   left: 1rem;

@@ -1,62 +1,57 @@
 <template>
-    <div>
-        <detail-banner
-        :sightName="sightName"
-        :bannerImg="bannerImg"
-        :bannerImgs="gallaryImgs">
-        </detail-banner>
-        <detail-header></detail-header>
-        <div class="content">
-          <detail-list :list="list"></detail-list>
-        </div>
+  <div>
+    <detail-banner :sightName="sightName" :bannerImg="bannerImg" :bannerImgs="gallaryImgs"></detail-banner>
+    <detail-header></detail-header>
+    <div class="content">
+      <detail-list :list="list"></detail-list>
     </div>
+  </div>
 </template>
 <script>
-import DetailBanner from './components/Banner'
-import DetailHeader from './components/Header'
-import DetailList from './components/List'
+import DetailBanner from '@/view/detail/components/Banner.vue'
+import DetailHeader from '@/view/detail/components/Header.vue'
+import DetailList from '@/view/detail/components/List.vue'
 import axios from 'axios'
+import { onMounted, ref } from 'vue'
+import { useRoute } from 'vue-router'
 
 export default {
   name: 'Detail',
   components: {
     DetailBanner,
     DetailHeader,
-    DetailList
+    DetailList,
   },
-  data () {
-    return {
-      sightName: '',
-      bannerImg: '',
-      gallaryImgs: [],
-      list: []
-    }
-  },
-  methods: {
-    getDetailInfo () {
-      axios.get('./api/detail.json', {
+  setup() {
+    let sightName = ref('')
+    let bannerImg = ref('')
+    let gallaryImgs = ref([])
+    let list = ref([])
+    const route = useRoute()
+    async function getDetailInfo() {
+      let res = await axios.get('http://localhost:3000/detail', {
         params: {
-          id: this.$route.params.id
-        }
-      }).then(this.handleGetDataSucc)
-    },
-    handleGetDataSucc (res) {
-      res = res.data
-      if (res.ret && res.data) {
+          id: route.params.id,
+        },
+      })
+      console.log('data', res)
+      if (res && res.data) {
         const data = res.data
-        this.sightName = data.sightName
-        this.bannerImg = data.bannerImg
-        this.gallaryImgs = data.gallaryImgs
-        this.list = data.categoryList
+        sightName.value = data.sightName
+        bannerImg.value = data.bannerImg
+        gallaryImgs.value = data.gallaryImgs
+        list.value = data.categoryList
       }
     }
+    onMounted(() => {
+      getDetailInfo()
+    })
+    return { sightName, bannerImg, gallaryImgs, list }
   },
-  mounted () {
-    this.getDetailInfo()
-  }
 }
 </script>
 <style lang="stylus" scoped>
-.content
-  height: 80rem
+.content {
+  height: 80rem;
+}
 </style>

@@ -35,7 +35,6 @@ export default {
       startY = elems.value['A'].offsetTop
     })
     function handleLetterClick(e) {
-      console.log('e', e.target.innerText)
       context.emit('change', e.target.innerText)
     }
     function handleTouchStart() {
@@ -48,14 +47,16 @@ export default {
       if (touchStatus) {
         if (timer) {
           clearTimeout(timer)
+          timer = null
         }
         timer = setTimeout(() => {
-          const touchY = e.touches[0].clientY - 78.39
-          const index = Math.floor((touchY - startY) / 24)
+          const touchY = e.touches[0].clientY - 79
+          console.log('touchY', touchY)
+          const index = Math.floor((touchY - startY) / 20)
           if (index >= 0 && index < letters.value.length) {
-            context.emit('change', letters[index])
+            context.emit('change', letters.value[index])
           }
-        }, 16)
+        }, 8)
       }
     }
     return {
@@ -77,7 +78,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  top: 10rem;
+  top: 1.58rem;
   right: 0;
   bottom: 0;
   width: 1.5rem;

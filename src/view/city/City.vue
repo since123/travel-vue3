@@ -12,7 +12,7 @@ import CityHeader from '@/view/city/components/Header.vue'
 import CitySearch from '@/view/city/components/Search.vue'
 import CityList from '@/view/city/components/List.vue'
 import CityAlphabet from '@/view/city/components/Alphabet.vue'
-import { onMounted, ref, reactive } from 'vue'
+import { onMounted, ref } from 'vue'
 export default {
   name: 'City',
   components: {
@@ -25,6 +25,8 @@ export default {
   setup() {
     const { letter, handleLetterChange } = useLetterLogic()
     const { cities, hotCities } = useCityLogic()
+    console.log('letter3', letter)
+
     return { letter, hotCities, cities, handleLetterChange }
   },
 }
@@ -46,9 +48,9 @@ function useCityLogic() {
 function useLetterLogic() {
   let letter = ref('')
   function handleLetterChange(newletter) {
-    letter = newletter
-    console.log('letter', letter)
+    letter.value = newletter
   }
+  console.log('letter2', letter)
 
   return { letter, handleLetterChange }
 }
