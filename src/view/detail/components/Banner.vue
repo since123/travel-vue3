@@ -34,10 +34,10 @@ export default {
     let showGallery = ref(false)
     let imgs = ref([])
     function handleBannerClick() {
-      showGallery = true
+      showGallery.value = true
     }
     function handleGallaryClick() {
-      showGallery = false
+      showGallery.value = false
     }
     return { showGallery, imgs, handleBannerClick, handleGallaryClick }
   },
@@ -49,6 +49,10 @@ export default {
   overflow: hidden;
   height: 0;
   padding-bottom: 55%;
+
+  .banner-img {
+    width: 100%;
+  }
 }
 
 .banner-info {
@@ -59,16 +63,18 @@ export default {
   bottom: 0;
   line-height: 1rem;
   color: #fff;
-  background-image: liner-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  background-image: linear-gradient(0deg, black, transparent);
 
   .banner-title {
     flex: 1;
     font-size: 0.9rem;
-    padding: 0 0.3rem;
+    padding: 0 0.5rem;
+    line-height: 2.4rem;
   }
 
   .banner-number {
     padding: 0 1rem;
+    margin: 0.5rem;
     height: 1.5rem;
     line-height: 1.5rem;
     border-radius: 0.5rem;

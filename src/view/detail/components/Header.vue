@@ -11,7 +11,7 @@
   </div>
 </template>
 <script>
-import { reactive, ref, onActivated, onDeactivated } from 'vue'
+import { reactive, ref, onMounted, onUnmounted } from 'vue'
 export default {
   name: 'DetailHeader',
   setup() {
@@ -24,17 +24,17 @@ export default {
       if (top > 60) {
         let opacity = top / 140
         opacity = opacity > 1 ? 1 : opacity
-        opacityStyle = { opacity }
+        opacityStyle.opacity = opacity
         showAbs.value = false
       } else {
         showAbs.value = true
       }
     }
 
-    onActivated(() => {
+    onMounted(() => {
       window.addEventListener('scroll', handleScroll)
     })
-    onDeactivated(() => {
+    onUnmounted(() => {
       window.removeEventListener('scroll', handleScroll)
     })
     return { showAbs, opacityStyle, handleScroll }

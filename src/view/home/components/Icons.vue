@@ -84,7 +84,7 @@ export default {
 @import '../src/assets/styles/mixins.styl';
 
 .swiper {
-  padding-top: 10px;
+  padding: 10px 0;
 
   /deep/ .swiper-pagination-bullet-active {
     background: #00bcd4;
@@ -103,20 +103,15 @@ export default {
   float: left;
   width: 25%;
   height: 0;
-  padding-bottom: 20%;
+  padding-bottom: 23%;
 
   .icon-img {
     position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 1rem;
     box-sizing: border-box;
-    padding: 0.1rem;
 
     .icon-img-content {
-      height: 80%;
-      width: 60%;
+      height: 50%;
+      width: 55%;
       display: block;
       margin: 0 auto;
     }
@@ -126,9 +121,9 @@ export default {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
-    height: 1rem;
-    line-height: 1rem;
+    bottom: 0rem;
+    height: 3rem;
+    line-height: 3rem;
     text-align: center;
     color: $darkTextColor;
     font-size: 0.4rem;

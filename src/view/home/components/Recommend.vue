@@ -13,7 +13,7 @@
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
           <p class="item-desc">{{item.desc}}</p>
-          <button class="item-button">查看详情</button>
+          <!-- <button class="item-button">查看详情</button> -->
         </div>
       </router-link>
     </ul>
@@ -58,13 +58,14 @@ export default {
       height: 1.8rem;
       line-height: 1.8rem;
       font-size: 0.9rem;
+      color: #00bcd4;
       ellipsis();
     }
 
     .item-desc {
       font-size: 0.5rem;
       line-height: 1.2rem;
-      color: #ccc;
+      color: #6e6969;
       ellipsis();
     }
 
@@ -74,6 +75,7 @@ export default {
       line-height: 1.2rem;
       background: #ff9300;
       padding: 0 0.1rem;
+      border: none;
     }
   }
 }

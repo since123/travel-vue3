@@ -4,7 +4,6 @@
     "swiperList": [
       {
         "id": "1",
-
         "imgUrl": "../src/assets/images/0d3c08c2d526f3350080ce41bbcb58c2.jpg_750x200_f1155433.jpg"
       },
       {
@@ -44,129 +43,129 @@
       {
         "id": "1",
         "imgUrl": "../src/assets/images/a40ee278d67000f2a29d2e20f6a029b3.png",
-        "desc": "koadoawdo"
+        "desc": "酒店"
       },
       {
         "id": "2",
         "imgUrl": "../src/assets/images/a963333e1fa802.png",
-        "desc": "koadoawdo"
+        "desc": "机票"
       },
       {
         "id": "3",
         "imgUrl": "../src/assets/images/cb72b99b71974c02.png",
-        "desc": "koadoawdo"
+        "desc": "火车票"
       },
       {
         "id": "4",
         "imgUrl": "../src/assets/images/eb88861d78fb9902.png",
-        "desc": "koadoawdo"
+        "desc": "度假"
       },
       {
         "id": "5",
         "imgUrl": "../src/assets/images/f3dd6c383aeb3b02.png",
-        "desc": "koadoawdo"
+        "desc": "门票"
       },
       {
         "id": "6",
         "imgUrl": "../src/assets/images/a40ee278d67000f2a29d2e20f6a029b3.png",
-        "desc": "koadoawdo"
+        "desc": "攻略"
       },
       {
         "id": "7",
         "imgUrl": "../src/assets/images/a963333e1fa802.png",
-        "desc": "koadoawdo"
+        "desc": "团购"
       },
       {
         "id": "8",
         "imgUrl": "../src/assets/images/cb72b99b71974c02.png",
-        "desc": "koadoawdo"
+        "desc": "借钱"
       },
       {
         "id": "9",
         "imgUrl": "../src/assets/images/eb88861d78fb9902.png",
-        "desc": "koadoawdo"
+        "desc": "客栈"
       },
       {
         "id": "10",
         "imgUrl": "../src/assets/images/f3dd6c383aeb3b02.png",
-        "desc": "koadoawdo"
+        "desc": "民宿"
       },
       {
         "id": "11",
         "imgUrl": "../src/assets/images/a40ee278d67000f2a29d2e20f6a029b3.png",
-        "desc": "koadoawdo"
+        "desc": "行程"
       },
       {
         "id": "12",
         "imgUrl": "../src/assets/images/a963333e1fa802.png",
-        "desc": "koadoawdo"
+        "desc": "周末游"
       },
       {
         "id": "13",
         "imgUrl": "../src/assets/images/cb72b99b71974c02.png",
-        "desc": "koadoawdo"
+        "desc": "赚钱"
       },
       {
         "id": "14",
         "imgUrl": "../src/assets/images/eb88861d78fb9902.png",
-        "desc": "koadoawdo"
+        "desc": "船票"
       },
       {
         "id": "15",
         "imgUrl": "../src/assets/images/f3dd6c383aeb3b02.png",
-        "desc": "koadoawdo"
+        "desc": "自驾"
       }
     ],
     "recommendList": [
       {
         "id": "1",
         "imgUrl": "../src/assets/images/2f9b29981c3c9f85a3.img.jpg_200x200_9d91fda5.jpg",
-        "title": "title",
-        "desc": "koadoawdo"
+        "title": "三亚畅游",
+        "desc": "一家人一起去三亚，共度美好夏日，划船......"
       },
       {
         "id": "2",
         "imgUrl": "../src/assets/images/04b92c99462687fa1ba45c1b5ba4ad77.jpg_200x200_4ab5da75.jpg",
-        "title": "title",
-        "desc": "koadoawdo"
+        "title": "海洋馆",
+        "desc": "周末游的好去处，带上老人小孩......"
       },
       {
         "id": "3",
         "imgUrl": "../src/assets/images/4ee5653be58dcb1a3.water.jpg_200x200_d169685d.jpg",
-        "title": "title",
-        "desc": "koadoawdo"
+        "title": "迪士尼乐园",
+        "desc": "情侣出游好去处，也适合周末一家人......"
       },
       {
         "id": "4",
         "imgUrl": "../src/assets/images/4fcd53b16db83ac7a3.water.jpg_200x200_4ca73ce5.jpg",
-        "title": "title",
-        "desc": "koadoawdo"
+        "title": "泡沫节",
+        "desc": "景区泡沫节来袭，快带上家里的小孩子......"
       }
     ],
     "weekendList": [
       {
         "id": "1",
         "imgUrl": "../src/assets/images/5afbf529076ef6.jpg_r_640x214_7414b151.jpg",
-        "title": "title",
-        "desc": "koadoawdo"
+        "title": "赤壁之游",
+        "desc": "五一小长假必去之处，带上三五好友一起吧，这里有险峻的山峰......"
       },
       {
         "id": "2",
         "imgUrl": "../src/assets/images/80108ae993d1e3.jpg_r_640x214_89628567.jpg",
-        "title": "title",
-        "desc": "koadoawdo"
+        "title": "长白山欢度两天三夜",
+        "desc": "想体验搭帐篷的乐趣，三五好友冰天雪地小酌一杯？快来......"
       },
       {
         "id": "3",
         "imgUrl": "../src/assets/images/abe8a48a6ef8bf.jpg_r_640x214_7c41cc81.jpg",
-        "title": "title",
-        "desc": "koadoawdo"
+        "title": "登黄鹤楼",
+        "desc": "来武汉必去之处，黄鹤楼是要登上一登的，带上......"
       },
       {
         "id": "4",
         "imgUrl": "../src/assets/images/e23304b4b90d16.jpg_r_640x214_87d3b4f1.jpg",
-        "title": "测你弄完in覅哦",
-        "desc": "koadooe从你偶尔都女女do"
+        "title": "金银花湿地公园",
+        "desc": "超大的湿地公园，空气清醒，远离喧嚣......"
       }
     ]
   },

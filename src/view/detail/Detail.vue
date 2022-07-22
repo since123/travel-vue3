@@ -52,6 +52,6 @@ export default {
 </script>
 <style lang="stylus" scoped>
 .content {
-  height: 80rem;
+  // height: 40rem;
 }
 </style>
